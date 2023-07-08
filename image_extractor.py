@@ -12,7 +12,7 @@ driver = webdriver.Chrome()
 for i,url in enumerate(urls_df.values):
     driver.get(url[0])
     ##print(driver.title)
-
+    current_url = url[0]
     try:
         confirm = driver.find_element('xpath','//*[@id="wrapper"]/div[7]/table/tbody/tr/td[1]/span/a')
         confirm.click()
