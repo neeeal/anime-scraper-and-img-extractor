@@ -80,7 +80,7 @@ if __name__ == '__main__':
         driver = webdriver.Chrome()
         total_time += Scrape(url,driver)
         driver.close()
-        if i>=7: break ## Tester Only. Comment for full run.
+        if i>=100: break ## Tester Only. Comment for full run.
     print("\nTotal runtime --- %.2f minutes ---" % (total_time/60))
 
 
