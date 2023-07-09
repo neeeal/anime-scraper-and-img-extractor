@@ -25,7 +25,7 @@ def load_data(filepath):
 
 def get_current_url(url,driver):
     ## Bypassing age checking on to actual webpage
-    ## Checking if page will load
+    ## Checking if page will load, else refresh the page
     driver=driver; driver.get(url)
     try: myElem = WebDriverWait(driver, delay).until(EC.presence_of_element_located(('xpath','//*[@id="wrapper"]/div[7]/table/tbody/tr/td[1]/span/a')))
     except TimeoutException: print("Loading took too much time!"); driver.refresh()
